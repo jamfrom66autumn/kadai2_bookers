@@ -10,7 +10,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id)
     else
       @books = Book.all
-      @books = Book.all.order(created_at: :desc)
+    
       # @book=Book.new
       render :index
     end
@@ -18,7 +18,7 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    @books = Book.all.order(created_at: :desc)
+    
   end
 
   def show
